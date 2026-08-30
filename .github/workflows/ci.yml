@@ -19,6 +19,18 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
+      - name: Show Node and npm versions
+        run: |
+          node -v
+          npm -v
+          npx -v
+
+      - name: List repo files and package.json
+        run: |
+          ls -la
+          ls -la src || true
+          cat package.json
+
       - name: Install dependencies
         run: npm ci
 
