@@ -21,14 +21,17 @@ jobs:
 
       - name: Show Node and npm versions
         run: |
+          echo "=== node/npm versions ==="
           node -v
           npm -v
           npx -v
 
       - name: List repo files and package.json
         run: |
+          echo "=== repo files ==="
           ls -la
           ls -la src || true
+          echo "=== package.json ==="
           cat package.json
 
       - name: Install dependencies
