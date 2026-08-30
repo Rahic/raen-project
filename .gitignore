@@ -1,0 +1,6 @@
+﻿# Node modules
+node_modules/
+
+# Vitest / Vite runtime files
+node_modules/.vite/
+node_modules/.vite/**/results.json
