@@ -16,23 +16,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: '20'
           cache: 'npm'
-
-      - name: Show Node and npm versions
-        run: |
-          echo "=== node/npm versions ==="
-          node -v
-          npm -v
-          npx -v
-
-      - name: List repo files and package.json
-        run: |
-          echo "=== repo files ==="
-          ls -la
-          ls -la src || true
-          echo "=== package.json ==="
-          cat package.json
 
       - name: Install dependencies
         run: npm ci
